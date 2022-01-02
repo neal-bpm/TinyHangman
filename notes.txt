@@ -27,4 +27,12 @@ String.split(~r/\n/, trim: true) - Do not put regular expressions in double quot
 File.read! vs File.read
 
 Coding and thinking as transformation of states in functional programming
+New field - 
+	Module attribute - loaded at compilation time
+Example:
+ @word_list "assets/words.txt"
+        |> File.read!()
+        |> String.split(~r/\n/, trim: true) 
 
+
+ 
