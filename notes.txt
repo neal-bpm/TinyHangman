@@ -1,0 +1,4 @@
+IEX shortcuts:
+Ctrl + A - Cursor moved to Starting of the line
+Ctrl + K - Characters after cursor position erased
+#iex:break - Breaking the IEX runner comment
