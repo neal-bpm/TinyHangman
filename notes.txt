@@ -23,5 +23,8 @@ Downloading files using curl command:
 curl https://coding-gnome.com/courses/e4p2/assets/words.txt >words.txt
 
 Function refresh:
-String.split(~r/\n/, trim: true)
+String.split(~r/\n/, trim: true) - Do not put regular expressions in double quotes
 File.read! vs File.read
+
+Coding and thinking as transformation of states in functional programming
+
