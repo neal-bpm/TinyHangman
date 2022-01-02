@@ -8,3 +8,15 @@ iex -h
 mix help
 mix help run
 
+Running and compiling the code in normal terminal using MIX
+mix
+mix test
+mix compile
+mix run
+mix run -e Dicitonary.hello
+
+Compiling in IEX
+c "lib/dictionary.ex"
+r Dictionary
+
+
