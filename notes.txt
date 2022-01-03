@@ -55,8 +55,22 @@ Boolean - true, false , nil (Falsy)
 Ranges	- a = 1..5 
 	- 'in' operator to verify the validation bound  Example: 4 in a
 	- for i <- a, do: i * 7
+Sigils	- starting with tilte character ~ followed by type
+	- ~s[hello]
+	- three ways of representation 
+		- ~w|...|,~c/.../,~s"...",~S'...'
+		- ~C<...>, ~r{...}, (...),[...]
+		- multiline support 
+			~w"""
+			    .....
+			  """
+	- lowercase sigils supports interpolation, while upper case do not
+	- sigils to work with date and time - ~D, ~T, ~N
+
+			
+
 Query:
 When to use String.to_integer vs String.parse
 What is the purpose of using "use" vs "import" in iex? (Refer the usage of "use Bitwise" in iex boolean section)
-
+How to get the latest value of Time using different variable assignment mechanisms like interpolation, variable assignmentetc?
  
