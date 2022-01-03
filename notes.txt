@@ -65,7 +65,10 @@ Sigils	- starting with tilte character ~ followed by type
 			    .....
 			  """
 	- lowercase sigils supports interpolation, while upper case do not
-	- sigils to work with date and time - ~D, ~T, ~N
+	- sigils to work with date and time - ~D, ~T, ~N, ~U
+	- helps to reduce visual overload. Ex: defstruct ~w[one , two, three]
+	- default sigils are available in Kernel module
+	- sigil concepts can be implemented by defining a function name starting with sigil_<<characters>> with two parameters 1. string and 2. modifiers.
 
 			
 
