@@ -82,7 +82,28 @@ Tuples
 	- for smaller element size
 	- commonly/frequently used to pass flagged values to/fro functions
 	- {:ok, contents}, {:error, reason}
-			
+	- Tuples start at 0
+		iex> Tuple.insert_at(tuple, 0, :foo)
+   		     {:foo, :bar, :baz}
+Lists
+	- lists design suit well for fn language
+	- lists are not arrays
+	- lists are linked list
+	- proper and improperlist
+	- head|tail
+	- accessing elements from top of the list easily	
+
+Map
+	- key value pair 
+	- two common ways to create map
+		- using atom as key. Example %{firstname: "foo",lastname: "bar"}
+		- accessing by map[:firstname] or map.firstname
+		- result varies when no matching key found
+		- with map[:middlename] - nil, map.middlename - keyerror
+		- other datatypes as key. Represented as
+			- %{"firstname" => "hello"}
+		- can be considered similar to array needs
+		- module used Map, Enum to work with maps
 
 Query:
 When to use String.to_integer vs String.parse
