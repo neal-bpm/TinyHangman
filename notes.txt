@@ -70,6 +70,18 @@ Sigils	- starting with tilte character ~ followed by type
 	- default sigils are available in Kernel module
 	- sigil concepts can be implemented by defining a function name starting with sigil_<<characters>> with two parameters 1. string and 2. modifiers.
 
+Regular Expressions
+	- Regex module for regular expression exploration
+	- Kernel.=~ - regular expression match with strings
+	- only replace the first occurance of a string using global: false used in String.replace, Regex.replace function as parameter
+
+Tuples
+	- fixed length of collection of values
+	- example: {x, y}, {x, y, z}
+	- serves the same function
+	- for smaller element size
+	- commonly/frequently used to pass flagged values to/fro functions
+	- {:ok, contents}, {:error, reason}
 			
 
 Query:
