@@ -43,11 +43,20 @@ Integer - supports different base numbers
 Atoms	- starts with : followed by lowercase character, special characters and double quotes
 	- starts with Uppercase letters. Example Module name Dictionary internal mapped as ":Elixir.Dictionary" for
           Erlang representation
+	- is_atom function
+	- evaluting code inside atom. Example: "next-number: #{a+1}"
 
-
-
+Boolean - true, false , nil (Falsy)
+	- and / or / not (require true or false as part of evalution
+	- && / || / !  (truthy values)
+	- && / and  - returns the rhs value, if lhs value is true
+	- || / or   - returns the rhs value, if lhs value is false
+	- Bitwise
+Ranges	- a = 1..5 
+	- 'in' operator to verify the validation bound  Example: 4 in a
+	- for i <- a, do: i * 7
 Query:
 When to use String.to_integer vs String.parse
-
+What is the purpose of using "use" vs "import" in iex? (Refer the usage of "use Bitwise" in iex boolean section)
 
  
