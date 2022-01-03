@@ -34,5 +34,20 @@ Example:
         |> File.read!()
         |> String.split(~r/\n/, trim: true) 
 
+Datatypes and corresponding functions:
+Usage of Codepoints ?c
+
+Integer - supports different base numbers
+	- trunc, round , div
+	- String.to_integer, also String.to_integer along with basetype for conversion
+Atoms	- starts with : followed by lowercase character, special characters and double quotes
+	- starts with Uppercase letters. Example Module name Dictionary internal mapped as ":Elixir.Dictionary" for
+          Erlang representation
+
+
+
+Query:
+When to use String.to_integer vs String.parse
+
 
  
