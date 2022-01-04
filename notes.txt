@@ -105,6 +105,14 @@ Map
 		- can be considered similar to array needs
 		- module used Map, Enum to work with maps
 
+Pattern matching
+	- used in functional programming 
+	- binding a value to lhs of = sign
+	- expressions cannot be evaluated along with matching
+	- _ not bound to pattern matching
+	- ^ (uparrow) - solution used for pin operation
+
+
 Query:
 When to use String.to_integer vs String.parse
 What is the purpose of using "use" vs "import" in iex? (Refer the usage of "use Bitwise" in iex boolean section)
