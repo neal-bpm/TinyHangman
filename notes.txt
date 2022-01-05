@@ -114,10 +114,27 @@ Pattern matching
 	- pattern matching at function parameter level
 		- swap({x, y}), match(t={a, b})
 
+List
+	- decomposing the list using head and tail 
+	- examples on working with list
+		- finding the length of the list
+		- sum of the elements in the list
+		- square the elements in the list
+		- map with a function in the list where function is parameter
+
+
 
 
 Query:
 When to use String.to_integer vs String.parse
 What is the purpose of using "use" vs "import" in iex? (Refer the usage of "use Bitwise" in iex boolean section)
 How to get the latest value of Time using different variable assignment mechanisms like interpolation, variable assignmentetc?
- 
+
+Challenge:
+Write a function even_length? that uses pattern matching only to return false if the list you pass it has an odd number of elements, true otherwise.
+  def even_length?([]), do: false
+  def even_length?([_h1, _h2 | []]), do: true
+  def even_length?([_h1, _h2 | tail]), do: even_length?(tail)
+  def even_length?(_listnum), do: false 
+
+Note: Need to explore similar logic using 'when' guards
