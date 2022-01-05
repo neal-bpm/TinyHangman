@@ -111,6 +111,9 @@ Pattern matching
 	- expressions cannot be evaluated along with matching
 	- _ not bound to pattern matching
 	- ^ (uparrow) - solution used for pin operation
+	- pattern matching at function parameter level
+		- swap({x, y}), match(t={a, b})
+
 
 
 Query:
