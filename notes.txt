@@ -130,6 +130,20 @@ When to use String.to_integer vs String.parse
 What is the purpose of using "use" vs "import" in iex? (Refer the usage of "use Bitwise" in iex boolean section)
 How to get the latest value of Time using different variable assignment mechanisms like interpolation, variable assignmentetc?
 
+Design:
+SRP - Each function body is responsible for just a single transformation.
+-use muscle memory to handle all the low-level jobs
+-api design includes public side and private side
+	- new_game -> will define the games structure
+	- make_move -> client side playing the game with latest state
+	- state -> maintained at server side to hold game info and unable to client
+	- tally -> managed at client and server interaction.Also contains information about game and moves related to client.
+
+Dialyzer
+	-used to check the elixir code for bugs with type-checking
+
+
+
 Challenge:
 Write a function even_length? that uses pattern matching only to return false if the list you pass it has an odd number of elements, true otherwise.
   def even_length?([]), do: false
