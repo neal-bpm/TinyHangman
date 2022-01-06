@@ -141,8 +141,12 @@ SRP - Each function body is responsible for just a single transformation.
 
 Dialyzer
 	-used to check the elixir code for bugs with type-checking
-
-
+	-adding type specification to your code will make it easier for other people to see what the intent is
+	- types specs @spec, @type
+	- https://hexdocs.pm/elixir/typespecs.html (need to explore)
+	- adding dependence via mix.exs - deps
+		{:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+	invoking mix deps.get
 
 Challenge:
 Write a function even_length? that uses pattern matching only to return false if the list you pass it has an odd number of elements, true otherwise.
