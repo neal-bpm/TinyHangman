@@ -153,6 +153,9 @@ Elixir world:
 - alias
 - defstruct
 
+iex:
+iex --erl "-kernel shell_history enabled"
+
 Challenge:
 Write a function even_length? that uses pattern matching only to return false if the list you pass it has an odd number of elements, true otherwise.
   def even_length?([]), do: false
