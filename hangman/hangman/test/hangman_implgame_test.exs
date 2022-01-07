@@ -14,6 +14,12 @@ defmodule HangmanImplGameTest do
     assert game.turns_left == 7
     assert game.game_state == :initializing
     assert game.letters == ~w[w o m b a t]
+
   end
+  test "check each element of the new game letters list in a lower-case ASCII" do
+    game = Game.new_game("wombat")
+    assert game.letters |> Enum.all?(fn element -> Regex.match?(~r/[a-z]/, element) end)
+  end
+
 
 end
