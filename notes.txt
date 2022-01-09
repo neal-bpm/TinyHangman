@@ -164,3 +164,12 @@ Write a function even_length? that uses pattern matching only to return false if
   def even_length?(_listnum), do: false 
 
 Note: Need to explore similar logic using 'when' guards
+Pattern matching at the function clause:
+ - game = %{game_state: :won}
+ - verifying more than one state using when guard at function head
+   by assigning a variable at function pattern matcj
+	game = %{game_state: state} when state in [:won, :lost]
+
+Also using for loop syntax
+	for state <- [:won, :lost]
+
