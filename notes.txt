@@ -173,3 +173,8 @@ Pattern matching at the function clause:
 Also using for loop syntax
 	for state <- [:won, :lost]
 
+Updating the Map:
+- Map.put
+- %{game | game_state: :already_used}
+
+Also usage of MapSet
