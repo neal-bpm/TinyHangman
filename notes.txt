@@ -178,3 +178,7 @@ Updating the Map:
 - %{game | game_state: :already_used}
 
 Also usage of MapSet
+
+Recursion looping
+Tail Call Optimization
+
