@@ -1,13 +1,11 @@
 defmodule Dictionary do
 
-  @word_list "assets/words.txt"
-        |> File.read!()
-        |> String.split(~r/\n/, trim: true)
+  alias Dictionary.Runtime.Server
 
+  @opaque t :: Server.t()
+  @spec start_link() :: { :ok, t }
+  defdelegate start_link, to: Server
 
-  def random_word do
-    @word_list
-    |> Enum.random()
-  end
+  defdelegate random_word(words), to: Server
 
 end
