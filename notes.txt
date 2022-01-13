@@ -182,3 +182,32 @@ Also usage of MapSet
 Recursion looping
 Tail Call Optimization
 
+Processes and messages:
+spawn
+- message passing between individual processes
+- Process - internal to Elixir internal system
+- new process creation using "spawn"
+	- spawn(fun)
+	- spawn(mfa)
+	Example:
+	- 1..10 |> Enum.each(fn _ -> spawn fn -> nil; IO.puts "Hello" end end)
+	- processes are light wt and cheap 
+	- can create one in less than 10micro sec and takes less than 3k of memory
+- Messages: send and receive
+	- send a message to a process.
+	- receive waits for a message to arrive, binds it to a variable, then executes the associated code. 
+	- receive block
+		- receive do
+			msg -> IO.puts("Hello #{inspect msg}")
+		  end
+	- spawn Procs, :hello, [ ]
+	- pid = v(-1)
+	- send pid, "Hello"
+	- make the function recursive to make process available
+Selectively receiving messages with Pattern Matching
+
+Linking Processes together:
+	- spawn_link
+
+Agents: An Abstraction over state
+

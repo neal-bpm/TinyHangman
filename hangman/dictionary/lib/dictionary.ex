@@ -6,6 +6,6 @@ defmodule Dictionary do
   @spec start_link() :: { :ok, t }
   defdelegate start_link, to: Server
 
-  defdelegate random_word(words), to: Server
+  defdelegate random_word(), to: Server
 
 end
