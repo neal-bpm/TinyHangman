@@ -9,22 +9,20 @@ defmodule B1Web.HangmanController do
     game = Hangman.new_game()
 
     conn
-    |> put_session(:game, game)
-    |> redirect(to: Routes.hangman_path(conn, :show))
-
+      |> put_session( :game, game)
+      |> redirect(to: Routes.hangman_path(conn, :show))
   end
 
-  @spec update(Plug.Conn.t(), nil | maybe_improper_list | map) :: Plug.Conn.t()
   def update(conn, params) do
     guess = params["make_move"]["guess"]
-    put_in(conn.params["make_move"]["guess"],"")
-    |> get_session(:game)
+
+    put_in(conn.params["make_move"]["guess"], "")
+    |>  get_session(:game)
     |> Hangman.make_move(guess)
 
     redirect(conn, to: Routes.hangman_path(conn, :show))
   end
 
-  @spec show(Plug.Conn.t(), any) :: Plug.Conn.t()
   def show(conn, _param) do
     tally =
       conn
@@ -33,4 +31,5 @@ defmodule B1Web.HangmanController do
 
     render(conn, "game.html", tally: tally)
   end
+
 end

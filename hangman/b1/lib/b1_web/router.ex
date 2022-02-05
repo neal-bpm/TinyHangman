@@ -17,10 +17,9 @@ defmodule B1Web.Router do
   scope "/hangman", B1Web do
     pipe_through :browser
 
-    get   "/", HangmanController, :index
-    post  "/", HangmanController, :new
-    put   "/", HangmanController, :update
-
+    get   "/",         HangmanController, :index
+    post  "/",         HangmanController, :new
+    put   "/",         HangmanController, :update
     get   "/current", HangmanController, :show
   end
 
