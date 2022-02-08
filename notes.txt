@@ -1,3 +1,4 @@
+
 IEX shortcuts:
 Ctrl + A - Cursor moved to Starting of the line
 Ctrl + K - Characters after cursor position erased
@@ -222,4 +223,20 @@ iex(3)> fall_velocity.(20)
 iex(4)> fall_velocity.(200)
 62.609903369994115
 
+Mix task:
+
+mix help
+To create mix tasks:
+mix tasks
+
+When counting the elements in a data structure,
+Elixir also abides by a simple rule: 
+the function is named size if the operation is in constant time (i.e. the value is pre-calculated)
+ or
+length if the operation is linear (i.e. calculating the length gets slower as the input grows). As a mnemonic, both “length” and “linear” start with “l”.
+
+Data types related to process communication:
+PID
+Reference
+Port
 
